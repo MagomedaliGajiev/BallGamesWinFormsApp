@@ -22,10 +22,6 @@ namespace CatchMe2WinFormsApp
                 var moveBall = new RandomMoveBall(this);
                 balls.Add(moveBall);
                 moveBall.Start();
-
-                var ball = new RandomSizeAndPointBall(this);
-                balls.Add(ball);
-                ball.Start();
             }
         }
 
