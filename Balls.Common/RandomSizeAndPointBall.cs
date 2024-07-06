@@ -1,4 +1,4 @@
-﻿namespace BallGamesWinFormsApp
+﻿namespace Balls.Common
 {
     public class RandomSizeAndPointBall : RandomPointBall
     {

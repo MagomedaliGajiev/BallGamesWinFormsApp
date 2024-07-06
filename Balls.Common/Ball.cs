@@ -1,4 +1,4 @@
-﻿namespace BallGamesWinFormsApp
+﻿namespace Balls.Common
 {
     public class Ball
     {
@@ -33,7 +33,7 @@
         {
             return x >= 0 && y >= 0 && x + size <= _form.ClientSize.Width
                 && y + size <= _form.ClientSize.Height;
-            
+
         }
 
         public bool Contains(int pointX, int pointY)

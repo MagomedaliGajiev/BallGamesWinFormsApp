@@ -1,6 +1,6 @@
 ﻿using Timer = System.Windows.Forms.Timer;
 
-namespace BallGamesWinFormsApp
+namespace Balls.Common
 {
     public class MoveBall : RandomPointBall
     {

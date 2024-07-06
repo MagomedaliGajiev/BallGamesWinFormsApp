@@ -1,4 +1,4 @@
-using BallGamesWinFormsApp;
+using Balls.Common;
 
 namespace CatchMe2WinFormsApp
 {
