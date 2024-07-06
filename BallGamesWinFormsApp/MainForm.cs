@@ -9,10 +9,7 @@ namespace BallGamesWinFormsApp
 
         private void ballPaintButton_Click(object sender, EventArgs e)
         {
-            var graphics = CreateGraphics();
-            var brush = Brushes.Aqua;
-            var rectangle = new Rectangle(150, 150, 100, 100);
-            graphics.FillEllipse(brush, rectangle);
+            var ball = new Ball(this);
         }
     }
 }
