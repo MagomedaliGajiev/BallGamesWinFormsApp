@@ -16,10 +16,9 @@
 
         public void Show()
         {
-            var graphics = _form.CreateGraphics();
             var brush = Brushes.Aqua;
-            var rectangle = new Rectangle(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
-            graphics.FillEllipse(brush, rectangle);
+            Draw(brush);
+           
         }
 
         public void Move()
@@ -28,6 +27,7 @@
             Go();
             Show();
         }
+
 
         public bool OnForm()
         {
@@ -47,16 +47,21 @@
 
         public void Clear()
         {
-            var graphics = _form.CreateGraphics();
             var brush = new SolidBrush(_form.BackColor);
-            var rectangle = new Rectangle(centerX, centerY, radius, radius);
-            graphics.FillEllipse(brush, rectangle);
+            Draw(brush)
         }
 
         private void Go()
         {
             centerX += vx;
             centerY += vy;
+        }
+
+        private void Draw(Brush brush)
+        {
+            var graphics = _form.CreateGraphics();
+            var rectangle = new Rectangle(centerX - radius, centerY - radius, 2 * radius, 2 * radius);
+            graphics.FillEllipse(brush, rectangle);
         }
     }
 }
