@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ballPointButton = new Button();
+            ballMoveButton = new Button();
             randomBallPointButton = new Button();
+            pointBallMoveButton = new Button();
             SuspendLayout();
             // 
-            // ballPointButton
+            // ballMoveButton
             // 
-            ballPointButton.Location = new Point(991, 38);
-            ballPointButton.Name = "ballPointButton";
-            ballPointButton.Size = new Size(212, 52);
-            ballPointButton.TabIndex = 0;
-            ballPointButton.Text = "Рисовать шарик";
-            ballPointButton.UseVisualStyleBackColor = true;
-            ballPointButton.Click += ballPointButton_Click;
+            ballMoveButton.Location = new Point(991, 38);
+            ballMoveButton.Name = "ballMoveButton";
+            ballMoveButton.Size = new Size(212, 52);
+            ballMoveButton.TabIndex = 0;
+            ballMoveButton.Text = "Двигать";
+            ballMoveButton.UseVisualStyleBackColor = true;
+            ballMoveButton.Click += ballMoveButton_Click;
             // 
             // randomBallPointButton
             // 
@@ -52,13 +53,24 @@
             randomBallPointButton.UseVisualStyleBackColor = true;
             randomBallPointButton.Click += randomBallPointButton_Click;
             // 
+            // pointBallMoveButton
+            // 
+            pointBallMoveButton.Location = new Point(991, 106);
+            pointBallMoveButton.Name = "pointBallMoveButton";
+            pointBallMoveButton.Size = new Size(212, 52);
+            pointBallMoveButton.TabIndex = 2;
+            pointBallMoveButton.Text = "Двигать";
+            pointBallMoveButton.UseVisualStyleBackColor = true;
+            pointBallMoveButton.Click += pointBallMoveButton_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1231, 688);
+            Controls.Add(pointBallMoveButton);
             Controls.Add(randomBallPointButton);
-            Controls.Add(ballPointButton);
+            Controls.Add(ballMoveButton);
             Name = "MainForm";
             Text = "Мячики";
             MouseDown += MainForm_MouseDown;
@@ -67,7 +79,8 @@
 
         #endregion
 
-        private Button ballPointButton;
+        private Button ballMoveButton;
         private Button randomBallPointButton;
+        private Button pointBallMoveButton;
     }
 }
