@@ -46,5 +46,15 @@ namespace CatchMe2WinFormsApp
                 countBallsLabel.Text = countBalls.ToString();
             }
         }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            foreach (var ball in moveBalls)
+            {
+                ball.Clear();
+            }
+            clearButton.Enabled = false;
+            startButton.Enabled = true;
+        }
     }
 }
