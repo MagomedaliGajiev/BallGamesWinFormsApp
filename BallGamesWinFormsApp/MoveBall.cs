@@ -12,6 +12,11 @@ namespace BallGamesWinFormsApp
             timer.Tick += Timer_Tick;
         }
 
+        public bool IsMoveable()
+        {
+            return timer.Enabled;
+        }
+
         private void Timer_Tick(object? sender, EventArgs e)
         {
             Move();
