@@ -64,7 +64,7 @@
         public void Clear()
         {
             var brush = new SolidBrush(_form.BackColor);
-            Draw(brush)
+            Draw(brush);
         }
 
         private void Go()
