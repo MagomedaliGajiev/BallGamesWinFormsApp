@@ -1,9 +1,12 @@
-﻿namespace Balls.Common
+﻿using Timer = System.Windows.Forms.Timer;
+namespace Balls.Common
 {
     public class Ball
     {
-        protected static Random random = new Random();
         private Form _form;
+        private Timer timer;
+
+        protected static Random random = new Random();
         protected int vx = 5;
         protected int vy = 5;
         protected int centerX = 10;
@@ -12,6 +15,30 @@
         public Ball(Form form)
         {
             _form = form;
+            timer = new Timer();
+            timer.Interval = 20;
+            timer.Tick += Timer_Tick;
+        }
+
+
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            Move();
+        }
+
+        public bool IsMoveable()
+        {
+            return timer.Enabled;
+        }
+
+        public void Start()
+        {
+            timer.Start();
+        }
+
+        public void Stop()
+        {
+            timer.Stop();
         }
 
         public void Show()
@@ -47,18 +74,15 @@
 
         public bool OnForm()
         {
-            return centerX >= 0 && centerY >= 0 && centerX + radius <= _form.ClientSize.Width
-                && centerY + radius <= _form.ClientSize.Height;
-
+            return centerX >= LeftSide() && centerY >= TopSide() && centerX <= RightSide() && centerY <= DownSide();
         }
 
         public bool Contains(int pointX, int pointY)
         {
-            var radius = this.radius / 2;
-            var centerX = this.centerX + radius;
-            var centerY = this.centerY + radius;
+            var dx = pointX - centerX;
+            var dy = pointY - centerY;
 
-            return Math.Pow(centerX - pointX, 2) + Math.Pow(centerY - pointY, 2) <= Math.Pow(radius, 2);
+            return Math.Pow(dx, 2) + Math.Pow(dy, 2) <= Math.Pow(radius, 2);
         }
 
         public void Clear()

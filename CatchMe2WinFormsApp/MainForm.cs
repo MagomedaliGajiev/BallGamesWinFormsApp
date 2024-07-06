@@ -53,6 +53,8 @@ namespace CatchMe2WinFormsApp
             {
                 ball.Clear();
             }
+            countBalls = 0;
+            countBallsLabel.Text = countBalls.ToString();
             clearButton.Enabled = false;
             startButton.Enabled = true;
         }

@@ -1,35 +1,25 @@
-﻿using Timer = System.Windows.Forms.Timer;
+﻿
+
 
 namespace Balls.Common
 {
     public class MoveBall : RandomPointBall
     {
-        private Timer timer;
         public MoveBall(Form form) : base(form)
         {
-            timer = new Timer();
-            timer.Interval = 20;
-            timer.Tick += Timer_Tick;
+            vx = GenerateRandomProjection();
+            vy = GenerateRandomProjection();
         }
 
-        public bool IsMoveable()
+        private int GenerateRandomProjection()
         {
-            return timer.Enabled;
-        }
-
-        private void Timer_Tick(object? sender, EventArgs e)
-        {
-            Move();
-        }
-
-        public void Start()
-        {
-            timer.Start();
-        }
-
-        public void Stop()
-        {
-            timer.Stop();
+            var rondomDouble = random.NextDouble();
+            var sign = 1;
+            if (rondomDouble < 0.5)
+            {
+                sign = -1;
+            }
+            return random.Next(2, 5) * sign;
         }
     }
 }
