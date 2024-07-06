@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ballPaintButton = new Button();
-            randomBallPaintButton = new Button();
+            ballPointButton = new Button();
+            randomBallPointButton = new Button();
             SuspendLayout();
             // 
-            // ballPaintButton
+            // ballPointButton
             // 
-            ballPaintButton.Location = new Point(991, 38);
-            ballPaintButton.Name = "ballPaintButton";
-            ballPaintButton.Size = new Size(212, 52);
-            ballPaintButton.TabIndex = 0;
-            ballPaintButton.Text = "Рисовать шарик";
-            ballPaintButton.UseVisualStyleBackColor = true;
-            ballPaintButton.Click += ballPaintButton_Click;
+            ballPointButton.Location = new Point(991, 38);
+            ballPointButton.Name = "ballPointButton";
+            ballPointButton.Size = new Size(212, 52);
+            ballPointButton.TabIndex = 0;
+            ballPointButton.Text = "Рисовать шарик";
+            ballPointButton.UseVisualStyleBackColor = true;
+            ballPointButton.Click += ballPointButton_Click;
             // 
-            // randomBallPaintButton
+            // randomBallPointButton
             // 
-            randomBallPaintButton.Location = new Point(657, 38);
-            randomBallPaintButton.Name = "randomBallPaintButton";
-            randomBallPaintButton.Size = new Size(315, 52);
-            randomBallPaintButton.TabIndex = 1;
-            randomBallPaintButton.Text = "Рисовать случайный шарик";
-            randomBallPaintButton.UseVisualStyleBackColor = true;
-            randomBallPaintButton.Click += randomBallPaintButton_Click;
+            randomBallPointButton.Location = new Point(657, 38);
+            randomBallPointButton.Name = "randomBallPointButton";
+            randomBallPointButton.Size = new Size(315, 52);
+            randomBallPointButton.TabIndex = 1;
+            randomBallPointButton.Text = "Рисовать случайный шарик";
+            randomBallPointButton.UseVisualStyleBackColor = true;
+            randomBallPointButton.Click += randomBallPointButton_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1231, 688);
-            Controls.Add(randomBallPaintButton);
-            Controls.Add(ballPaintButton);
+            Controls.Add(randomBallPointButton);
+            Controls.Add(ballPointButton);
             Name = "MainForm";
             Text = "Мячики";
             MouseDown += MainForm_MouseDown;
@@ -67,7 +67,7 @@
 
         #endregion
 
-        private Button ballPaintButton;
-        private Button randomBallPaintButton;
+        private Button ballPointButton;
+        private Button randomBallPointButton;
     }
 }

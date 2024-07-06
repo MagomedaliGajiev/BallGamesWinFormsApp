@@ -7,12 +7,12 @@ namespace BallGamesWinFormsApp
             InitializeComponent();
         }
 
-        private void ballPaintButton_Click(object sender, EventArgs e)
+        private void ballPointButton_Click(object sender, EventArgs e)
         {
             var ball = new Ball(this);
         }
 
-        private void randomBallPaintButton_Click(object sender, EventArgs e)
+        private void randomBallPointButton_Click(object sender, EventArgs e)
         {
             var randomPointBall = new RandomPointBall(this);
         }
