@@ -5,8 +5,8 @@ namespace BallGamesWinFormsApp
     public class Ball
     {
         private MainForm _form;
-        private int vx = 5;
-        private int vy = 5;
+        private int vx = 1;
+        private int vy = 1;
         protected int x = 150;
         protected int y = 150;
         protected int size = 70;

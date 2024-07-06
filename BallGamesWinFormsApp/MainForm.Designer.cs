@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             ballMoveButton = new Button();
             randomBallPointButton = new Button();
             pointBallMoveButton = new Button();
+            timer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
             // ballMoveButton
@@ -63,6 +65,11 @@
             pointBallMoveButton.UseVisualStyleBackColor = true;
             pointBallMoveButton.Click += pointBallMoveButton_Click;
             // 
+            // timer
+            // 
+            timer.Interval = 15;
+            timer.Tick += timer_Tick;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -82,5 +89,6 @@
         private Button ballMoveButton;
         private Button randomBallPointButton;
         private Button pointBallMoveButton;
+        private System.Windows.Forms.Timer timer;
     }
 }
