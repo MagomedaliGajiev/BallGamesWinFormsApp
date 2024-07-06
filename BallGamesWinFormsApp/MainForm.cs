@@ -15,7 +15,7 @@ namespace BallGamesWinFormsApp
 
         private void randomBallPointButton_Click(object sender, EventArgs e)
         {
-            var randomPointBall = new RandomPointBall(this);
+            var randomPointBall = new RandomSizeAndPointBall(this);
             randomPointBall.Show();
         }
 

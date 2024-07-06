@@ -2,7 +2,7 @@
 {
     public class RandomPointBall : Ball
     {
-        private static Random random = new Random();
+        protected static Random random = new Random();
         public RandomPointBall(MainForm form) : base(form)
         {
             x = random.Next(0, form.ClientSize.Width);
