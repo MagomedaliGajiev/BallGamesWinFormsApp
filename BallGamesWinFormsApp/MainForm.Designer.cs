@@ -1,6 +1,6 @@
 ﻿namespace BallGamesWinFormsApp
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            ballPaintButton = new Button();
             SuspendLayout();
             // 
-            // button1
+            // ballPaintButton
             // 
-            button1.Location = new Point(938, 36);
-            button1.Name = "button1";
-            button1.Size = new Size(270, 46);
-            button1.TabIndex = 0;
-            button1.Text = "Рисовать шарик";
-            button1.UseVisualStyleBackColor = true;
+            ballPaintButton.Location = new Point(925, 50);
+            ballPaintButton.Name = "ballPaintButton";
+            ballPaintButton.Size = new Size(270, 69);
+            ballPaintButton.TabIndex = 0;
+            ballPaintButton.Text = "Рисовать шарик";
+            ballPaintButton.UseVisualStyleBackColor = true;
+            ballPaintButton.Click += ballPaintButton_Click;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1231, 688);
-            Controls.Add(button1);
-            Name = "Form1";
-            Text = "Form1";
+            Controls.Add(ballPaintButton);
+            Name = "MainForm";
+            Text = "Мячики";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
+        private Button ballPaintButton;
     }
 }
