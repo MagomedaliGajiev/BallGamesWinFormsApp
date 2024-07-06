@@ -28,6 +28,22 @@
             Show();
         }
 
+        public int LeftSide()
+        {
+            return radius;
+        }
+        public int RightSide()
+        {
+            return _form.ClientSize.Width - radius;
+        }
+        public int TopSide()
+        {
+            return radius;
+        }
+        public int DownSide()
+        {
+            return _form.ClientSize.Height - radius;
+        }
 
         public bool OnForm()
         {
