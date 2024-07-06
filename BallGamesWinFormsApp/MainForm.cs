@@ -2,30 +2,47 @@ namespace BallGamesWinFormsApp
 {
     public partial class MainForm : Form
     {
-        private List<MoveBall> movetBalls;
-        private PointBall pointBall;
+        private List<RandomMoveBall> movetBalls;
+        private PointBall ball;
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private void ballMoveButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
-            pointBall = new PointBall(this, e.X, e.Y);
-            pointBall.Show();
+            ball = new PointBall(this, e.X, e.Y);
+            ball.Show();
         }
 
-        private void ballMoveStopButton_Click(object sender, EventArgs e)
+        private void startButton_Click(object sender, EventArgs e)
         {
+            stopButton.Enabled = true;
+            startButton.Enabled = false;
+
+            movetBalls = new List<RandomMoveBall>();
+            for (int i = 0; i < 10; i++)
+            {
+                var moveBall = new RandomMoveBall(this);
+                movetBalls.Add(moveBall);
+                moveBall.Start();
+            }
+        }
+
+        private void stopButton_Click(object sender, EventArgs e)
+        {
+            var countBalls = 0;
             for (int i = 0; i < 10; i++)
             {
                 movetBalls[i].Stop();
+                if (movetBalls[i].OnForm())
+                {
+                    countBalls++;
+                }
             }
+            MessageBox.Show(countBalls.ToString());
+            stopButton.Enabled = false;
+            clearButton.Enabled = true;
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -36,15 +53,20 @@ namespace BallGamesWinFormsApp
             }
         }
 
-        private void manyBallsButton_Click(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            movetBalls = new List<MoveBall>();
-            for (int i = 0; i < 10; i++)
+            stopButton.Enabled = false;
+            clearButton.Enabled = false;
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            foreach (var ball in movetBalls)
             {
-                var moveBall = new MoveBall(this);
-                movetBalls.Add(moveBall);
-                moveBall.Start();
+                ball.Clear();
             }
+            clearButton.Enabled = false;
+            startButton.Enabled = true; 
         }
     }
 }

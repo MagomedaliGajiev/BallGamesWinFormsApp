@@ -2,7 +2,7 @@
 
 namespace BallGamesWinFormsApp
 {
-    public class MoveBall : RandomSizeAndPointBall
+    public class MoveBall : RandomPointBall
     {
         private Timer timer;
         public MoveBall(MainForm form) : base(form)

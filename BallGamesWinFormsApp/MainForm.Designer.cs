@@ -28,57 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            randomBallPointButton = new Button();
-            ballMoveStopButton = new Button();
-            manyBallsButton = new Button();
+            stopButton = new Button();
+            startButton = new Button();
+            clearButton = new Button();
             SuspendLayout();
             // 
-            // randomBallPointButton
+            // stopButton
             // 
-            randomBallPointButton.Location = new Point(580, 38);
-            randomBallPointButton.Name = "randomBallPointButton";
-            randomBallPointButton.Size = new Size(315, 52);
-            randomBallPointButton.TabIndex = 1;
-            randomBallPointButton.Text = "Рисовать случайный шарик";
-            randomBallPointButton.UseVisualStyleBackColor = true;
+            stopButton.Location = new Point(992, 81);
+            stopButton.Name = "stopButton";
+            stopButton.Size = new Size(227, 52);
+            stopButton.TabIndex = 2;
+            stopButton.Text = "Остановить";
+            stopButton.UseVisualStyleBackColor = true;
+            stopButton.Click += stopButton_Click;
             // 
-            // ballMoveStopButton
+            // startButton
             // 
-            ballMoveStopButton.Location = new Point(901, 72);
-            ballMoveStopButton.Name = "ballMoveStopButton";
-            ballMoveStopButton.Size = new Size(289, 52);
-            ballMoveStopButton.TabIndex = 2;
-            ballMoveStopButton.Text = "Остановить все шарики";
-            ballMoveStopButton.UseVisualStyleBackColor = true;
-            ballMoveStopButton.Click += ballMoveStopButton_Click;
+            startButton.Location = new Point(992, 23);
+            startButton.Name = "startButton";
+            startButton.Size = new Size(227, 52);
+            startButton.TabIndex = 3;
+            startButton.Text = "Создать";
+            startButton.UseVisualStyleBackColor = true;
+            startButton.Click += startButton_Click;
             // 
-            // manyBallsButton
+            // clearButton
             // 
-            manyBallsButton.Location = new Point(580, 106);
-            manyBallsButton.Name = "manyBallsButton";
-            manyBallsButton.Size = new Size(315, 52);
-            manyBallsButton.TabIndex = 3;
-            manyBallsButton.Text = "Много шариков";
-            manyBallsButton.UseVisualStyleBackColor = true;
-            manyBallsButton.Click += manyBallsButton_Click;
+            clearButton.Location = new Point(992, 139);
+            clearButton.Name = "clearButton";
+            clearButton.Size = new Size(227, 52);
+            clearButton.TabIndex = 4;
+            clearButton.Text = "Очистить";
+            clearButton.UseVisualStyleBackColor = true;
+            clearButton.Click += clearButton_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1231, 688);
-            Controls.Add(manyBallsButton);
-            Controls.Add(ballMoveStopButton);
-            Controls.Add(randomBallPointButton);
+            Controls.Add(clearButton);
+            Controls.Add(startButton);
+            Controls.Add(stopButton);
             Name = "MainForm";
             Text = "Мячики";
+            Load += MainForm_Load;
             MouseDown += MainForm_MouseDown;
             ResumeLayout(false);
         }
 
         #endregion
-        private Button randomBallPointButton;
-        private Button ballMoveStopButton;
-        private Button manyBallsButton;
+        private Button stopButton;
+        private Button startButton;
+        private Button clearButton;
     }
 }
