@@ -5,7 +5,7 @@ namespace BallGamesWinFormsApp
     public class MoveBall : RandomPointBall
     {
         private Timer timer;
-        public MoveBall(MainForm form) : base(form)
+        public MoveBall(Form form) : base(form)
         {
             timer = new Timer();
             timer.Interval = 20;

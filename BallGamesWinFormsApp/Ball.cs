@@ -1,17 +1,15 @@
-﻿using System.Windows.Forms;
-
-namespace BallGamesWinFormsApp
+﻿namespace BallGamesWinFormsApp
 {
     public class Ball
     {
         protected static Random random = new Random();
-        private MainForm _form;
+        private Form _form;
         protected int vx = 5;
         protected int vy = 5;
         protected int x = 150;
         protected int y = 150;
         protected int size = 50;
-        public Ball(MainForm form)
+        public Ball(Form form)
         {
             _form = form;
         }
@@ -36,6 +34,15 @@ namespace BallGamesWinFormsApp
             return x >= 0 && y >= 0 && x + size <= _form.ClientSize.Width
                 && y + size <= _form.ClientSize.Height;
             
+        }
+
+        public bool Contains(int pointX, int pointY)
+        {
+            var radius = size / 2;
+            var centerX = x + radius;
+            var centerY = y + radius;
+
+            return Math.Pow(centerX - pointX, 2) + Math.Pow(centerY - pointY, 2) <= Math.Pow(radius, 2);
         }
 
         public void Clear()
