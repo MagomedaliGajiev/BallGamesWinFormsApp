@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             randomBallPointButton = new Button();
             ballMoveStopButton = new Button();
-            timer = new System.Windows.Forms.Timer(components);
             manyBallsButton = new Button();
             SuspendLayout();
             // 
@@ -53,11 +51,6 @@
             ballMoveStopButton.Text = "Остановить все шарики";
             ballMoveStopButton.UseVisualStyleBackColor = true;
             ballMoveStopButton.Click += ballMoveStopButton_Click;
-            // 
-            // timer
-            // 
-            timer.Interval = 15;
-            timer.Tick += timer_Tick;
             // 
             // manyBallsButton
             // 
@@ -86,7 +79,6 @@
         #endregion
         private Button randomBallPointButton;
         private Button ballMoveStopButton;
-        private System.Windows.Forms.Timer timer;
         private Button manyBallsButton;
     }
 }
