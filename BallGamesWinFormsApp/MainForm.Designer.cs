@@ -61,6 +61,7 @@
             Controls.Add(ballPaintButton);
             Name = "MainForm";
             Text = "Мячики";
+            MouseDown += MainForm_MouseDown;
             ResumeLayout(false);
         }
 

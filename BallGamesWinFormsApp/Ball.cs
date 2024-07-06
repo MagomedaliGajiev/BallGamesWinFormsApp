@@ -6,7 +6,7 @@
         {
             var graphics = form.CreateGraphics();
             var brush = Brushes.Aqua;
-            var rectangle = new Rectangle(150, 150, 100, 100);
+            var rectangle = new Rectangle(150, 150, 70, 70);
             graphics.FillEllipse(brush, rectangle);
         }
     }
