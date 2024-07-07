@@ -3,8 +3,8 @@ namespace Balls.Common
 {
     public class Ball
     {
-        private Form _form;
-        private Timer timer;
+        protected Form _form;
+        protected Timer timer;
 
         protected static Random random = new Random();
         protected int vx = 5;
@@ -49,6 +49,11 @@ namespace Balls.Common
         public void Stop()
         {
             timer.Stop();
+        }
+
+        public Brush GetBrush()
+        {
+            return brush;
         }
 
         public void Show()

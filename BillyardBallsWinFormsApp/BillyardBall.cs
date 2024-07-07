@@ -8,12 +8,22 @@ namespace BillyardBallsWinFormsApp
         public event EventHandler<HitEventArgs> OnHited;
         public BillyardBall(Form form) : base(form)
         {
-
+            radius = 10;
         }
 
         public BillyardBall(Form form, Brush brush) : base(form, brush)
         {
 
+        }
+
+        public bool LeftOfCenter()
+        {
+            return centerX + radius < _form.ClientSize.Width / 2;
+        }
+
+        public bool RightOfCenter()
+        {
+            return centerX - radius > _form.ClientSize.Width / 2;
         }
 
         protected override void Go()

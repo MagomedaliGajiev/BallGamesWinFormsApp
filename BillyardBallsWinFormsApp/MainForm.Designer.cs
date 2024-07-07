@@ -54,7 +54,7 @@
             topLabel_1.AutoSize = true;
             topLabel_1.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 204);
             topLabel_1.ForeColor = SystemColors.Highlight;
-            topLabel_1.Location = new Point(602, 9);
+            topLabel_1.Location = new Point(536, 9);
             topLabel_1.Name = "topLabel_1";
             topLabel_1.Size = new Size(33, 37);
             topLabel_1.TabIndex = 1;
@@ -65,7 +65,7 @@
             downLabel_1.AutoSize = true;
             downLabel_1.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 204);
             downLabel_1.ForeColor = SystemColors.Highlight;
-            downLabel_1.Location = new Point(602, 684);
+            downLabel_1.Location = new Point(536, 684);
             downLabel_1.Name = "downLabel_1";
             downLabel_1.Size = new Size(33, 37);
             downLabel_1.TabIndex = 2;
@@ -98,7 +98,7 @@
             topLabel_2.AutoSize = true;
             topLabel_2.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 204);
             topLabel_2.ForeColor = Color.Red;
-            topLabel_2.Location = new Point(641, 9);
+            topLabel_2.Location = new Point(671, 9);
             topLabel_2.Name = "topLabel_2";
             topLabel_2.Size = new Size(33, 37);
             topLabel_2.TabIndex = 5;
@@ -120,7 +120,7 @@
             downLabel_2.AutoSize = true;
             downLabel_2.Font = new Font("Segoe UI", 10.125F, FontStyle.Bold, GraphicsUnit.Point, 204);
             downLabel_2.ForeColor = Color.Red;
-            downLabel_2.Location = new Point(641, 684);
+            downLabel_2.Location = new Point(671, 684);
             downLabel_2.Name = "downLabel_2";
             downLabel_2.Size = new Size(33, 37);
             downLabel_2.TabIndex = 7;
