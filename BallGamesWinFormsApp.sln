@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Balls.Common", "Balls.Commo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillyardBallsWinFormsApp", "BillyardBallsWinFormsApp\BillyardBallsWinFormsApp.csproj", "{5DA343C8-982A-4058-8285-D6B08B5CC61F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalutWinFormsApp", "SalutWinFormsApp\SalutWinFormsApp.csproj", "{292BB9FB-4C7A-43F8-B6D5-0F213CE77D45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalutWinFormsApp", "SalutWinFormsApp\SalutWinFormsApp.csproj", "{292BB9FB-4C7A-43F8-B6D5-0F213CE77D45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FruitNinjaWinFormsApp", "FruitNinjaWinFormsApp\FruitNinjaWinFormsApp.csproj", "{3425CC4C-BC26-4EEF-9065-B10F975BC917}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{292BB9FB-4C7A-43F8-B6D5-0F213CE77D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{292BB9FB-4C7A-43F8-B6D5-0F213CE77D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{292BB9FB-4C7A-43F8-B6D5-0F213CE77D45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3425CC4C-BC26-4EEF-9065-B10F975BC917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3425CC4C-BC26-4EEF-9065-B10F975BC917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3425CC4C-BC26-4EEF-9065-B10F975BC917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3425CC4C-BC26-4EEF-9065-B10F975BC917}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
