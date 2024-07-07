@@ -13,7 +13,7 @@ namespace BillyardBallsWinFormsApp
 
         public BillyardBall(Form form, Brush brush) : base(form, brush)
         {
-
+            radius = 10;
         }
 
         public bool LeftOfCenter()
