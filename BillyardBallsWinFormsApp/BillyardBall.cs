@@ -11,6 +11,11 @@ namespace BillyardBallsWinFormsApp
 
         }
 
+        public BillyardBall(Form form, Brush brush) : base(form, brush)
+        {
+
+        }
+
         protected override void Go()
         {
             base.Go();

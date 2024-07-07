@@ -13,27 +13,50 @@ namespace BillyardBallsWinFormsApp
         {
             for (int i = 0; i < 10; i++)
             {
-                var ball = new BillyardBall(this);
-                ball.OnHited += Ball_OnHited;
+                var ball = new BillyardBall(this, Brushes.Blue);
+                ball.OnHited += Ball_OnHited_1;
+                ball.Start();
+
+                ball = new BillyardBall(this, Brushes.Red);
+                ball.OnHited += Ball_OnHited_2;
                 ball.Start();
             }
         }
 
-        private void Ball_OnHited(object? sender, HitEventArgs e)
+        private void Ball_OnHited_2(object? sender, HitEventArgs e)
         {
             switch (e.Side)
             {
                 case Side.Left:
-                    leftLabel.Text = (Convert.ToInt32(leftLabel.Text) + 1).ToString();
+                    leftLabel_2.Text = (Convert.ToInt32(leftLabel_2.Text) + 1).ToString();
                     break;
                 case Side.Right:
-                    rightLabel.Text = (Convert.ToInt32(rightLabel.Text) + 1).ToString();
+                    rightLabel_2.Text = (Convert.ToInt32(rightLabel_2.Text) + 1).ToString();
                     break;
                 case Side.Top:
-                    topLabel.Text = (Convert.ToInt32(topLabel.Text) + 1).ToString();
+                    topLabel_2.Text = (Convert.ToInt32(topLabel_2.Text) + 1).ToString();
                     break;
                 case Side.Down:
-                    downLabel.Text = (Convert.ToInt32(downLabel.Text) + 1).ToString();
+                    downLabel_2.Text = (Convert.ToInt32(downLabel_2.Text) + 1).ToString();
+                    break;
+            }
+        }
+
+        private void Ball_OnHited_1(object? sender, HitEventArgs e)
+        {
+            switch (e.Side)
+            {
+                case Side.Left:
+                    leftLabel_1.Text = (Convert.ToInt32(leftLabel_1.Text) + 1).ToString();
+                    break;
+                case Side.Right:
+                    rightLabel_1.Text = (Convert.ToInt32(rightLabel_1.Text) + 1).ToString();
+                    break;
+                case Side.Top:
+                    topLabel_1.Text = (Convert.ToInt32(topLabel_1.Text) + 1).ToString();
+                    break;
+                case Side.Down:
+                    downLabel_1.Text = (Convert.ToInt32(downLabel_1.Text) + 1).ToString();
                     break;
             }
         }

@@ -11,6 +11,12 @@ namespace Balls.Common
             vy = GenerateRandomProjection();
         }
 
+        public MoveBall(Form form, Brush brush) : base(form, brush)
+        {
+            vx = GenerateRandomProjection();
+            vy = GenerateRandomProjection();
+        }
+
         private int GenerateRandomProjection()
         {
             var rondomDouble = random.NextDouble();
@@ -19,7 +25,7 @@ namespace Balls.Common
             {
                 sign = -1;
             }
-            return random.Next(2, 5) * sign;
+            return random.Next(2, 10) * sign;
         }
     }
 }
