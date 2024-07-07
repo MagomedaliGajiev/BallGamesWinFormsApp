@@ -18,6 +18,11 @@ namespace FruitNinjaWinFormsApp
             base.Go();
 
             vy += g;
+
+            if (centerY > DownSide() + 2 * radius)
+            {
+                Stop();
+            }
         }
     }
 }
