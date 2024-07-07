@@ -12,12 +12,22 @@ namespace Balls.Common
         protected int centerX = 10;
         protected int centerY = 10;
         protected int radius = 25;
+        protected Brush brush = Brushes.Aqua;
         public Ball(Form form)
         {
             _form = form;
             timer = new Timer();
             timer.Interval = 20;
             timer.Tick += Timer_Tick;
+        }
+
+        public Ball(Form form, Brush brush)
+        {
+            _form = form;
+            timer = new Timer();
+            timer.Interval = 20;
+            timer.Tick += Timer_Tick;
+            this.brush = brush;
         }
 
 
@@ -43,7 +53,6 @@ namespace Balls.Common
 
         public void Show()
         {
-            var brush = Brushes.Aqua;
             Draw(brush);
            
         }
