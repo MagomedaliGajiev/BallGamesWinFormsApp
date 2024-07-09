@@ -20,6 +20,7 @@ namespace AngryBirdsWinFormsApp
             {
                 CreateNewBird();
                 CreateNewPig();
+                scoreLabel.Text = (Convert.ToInt32(scoreLabel.Text) + 1).ToString();
             }
             if (!bird.IsMoveable())
             {
@@ -39,6 +40,7 @@ namespace AngryBirdsWinFormsApp
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
+            scoreLabel.Text = "0";
             CreateNewBird();
             CreateNewPig();
         }
