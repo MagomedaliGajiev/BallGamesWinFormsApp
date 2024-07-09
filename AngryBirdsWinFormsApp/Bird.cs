@@ -34,6 +34,11 @@ namespace AngryBirdsWinFormsApp
             vy += g;
         }
 
+        public bool IsOutSide()
+        {
+            return centerX > RightSide();
+        }
+
         public void SetVelocity(int x , int y)
         {
             vx = (x - centerX) / 20;

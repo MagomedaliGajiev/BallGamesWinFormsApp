@@ -20,6 +20,11 @@ namespace AngryBirdsWinFormsApp
             {
                 CreateNewBird();
             }
+
+            if (bird.IsOutSide())
+            {
+                CreateNewBird();
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -30,7 +35,15 @@ namespace AngryBirdsWinFormsApp
         private void MainForm_Shown(object sender, EventArgs e)
         {
             CreateNewBird();
+            CreateNewPig();
+        }
 
+        private void CreateNewPig()
+        {
+            if (pig != null)
+            {
+                pig.Clear();
+            }
             pig = new Pig(this);
             pig.Show();
         }
