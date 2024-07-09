@@ -16,6 +16,11 @@ namespace AngryBirdsWinFormsApp
 
         private void Timer_Tick(object? sender, EventArgs e)
         {
+            if (bird.Intersect(pig))
+            {
+                CreateNewBird();
+                CreateNewPig();
+            }
             if (!bird.IsMoveable())
             {
                 CreateNewBird();

@@ -41,8 +41,8 @@ namespace AngryBirdsWinFormsApp
 
         public void SetVelocity(int x , int y)
         {
-            vx = (x - centerX) / 20;
-            vy = (y - centerY) / 20;
+            vx = (x - centerX) / 25;
+            vy = (y - centerY) / 25;
         }
     }
 }

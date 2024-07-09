@@ -99,6 +99,13 @@ namespace Balls.Common
             return Math.Pow(dx, 2) + Math.Pow(dy, 2) <= Math.Pow(radius, 2);
         }
 
+        public bool Intersect(Ball other)
+        {
+            var dx = centerX - other.centerX;
+            var dy = centerY - other.centerY;
+            return Math.Pow(dx * dx + dy * dy, 2) <= radius + other.radius;
+        }
+
         public void Clear()
         {
             var brush = new SolidBrush(_form.BackColor);
