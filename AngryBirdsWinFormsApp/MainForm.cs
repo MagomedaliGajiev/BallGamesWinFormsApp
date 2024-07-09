@@ -2,6 +2,8 @@ namespace AngryBirdsWinFormsApp
 {
     public partial class MainForm : Form
     {
+        private Bird bird;
+        private Pig pig;
         public MainForm()
         {
             InitializeComponent();
@@ -9,16 +11,22 @@ namespace AngryBirdsWinFormsApp
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            var bird = new Bird(this);
+            bird = new Bird(this);
             bird.Show();
 
-            var pig = new Pig(this);
+            pig = new Pig(this);
             pig.Show();
+        }
+
+        private void MainForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            bird.SetVelocity(e.X, e.Y);
+            bird.Start();
         }
     }
 }
