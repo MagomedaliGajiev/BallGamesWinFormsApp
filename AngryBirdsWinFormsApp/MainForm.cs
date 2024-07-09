@@ -16,6 +16,9 @@ namespace AngryBirdsWinFormsApp
         {
             var bird = new Bird(this);
             bird.Show();
+
+            var pig = new Pig(this);
+            pig.Show();
         }
     }
 }
