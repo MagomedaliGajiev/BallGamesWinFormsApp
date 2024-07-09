@@ -103,7 +103,7 @@ namespace Balls.Common
         {
             var dx = centerX - other.centerX;
             var dy = centerY - other.centerY;
-            return Math.Pow(dx * dx + dy * dy, 2) <= radius + other.radius;
+            return dx * dx + dy * dy <= Math.Pow(radius + other.radius, 2);
         }
 
         public void Clear()

@@ -58,6 +58,7 @@ namespace AngryBirdsWinFormsApp
             timer.Stop();
             if (bird != null)
             {
+                bird.Stop();
                 bird.Clear();
             }
             bird = new Bird(this);
